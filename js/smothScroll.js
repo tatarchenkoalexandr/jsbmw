@@ -8,5 +8,5 @@ smothScrollElems.forEach(link => link.addEventListener('click', (event) => {
         behavior: 'smooth'
     });
    // console.log(id);
-
+//
 }))
