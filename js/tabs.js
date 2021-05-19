@@ -1,6 +1,6 @@
 const tabsHandlerElems = document.querySelectorAll('[data-tabs-handler]');
 const tabsFieldElems = document.querySelectorAll('[data-tabs-field]');
-const hDesignElems = document.querySelectorAll('.design__title');
+const hDesignElems = document.querySelectorAll('[data-tabs-title]');
 //console.log(hDesignElems);
 for (const tab of tabsHandlerElems) {
     tab.addEventListener('click', () => {
@@ -18,9 +18,20 @@ for (const tab of tabsHandlerElems) {
                 item.classList.add('hidden')
             }
         })
+       /* чтоб не менять верстку
         hDesignElems.forEach(h => {
             h.classList.toggle('hidden')
         }) 
+       */
+      //вариант с модификацией index.html
+        hDesignElems.forEach(tit => {
+            if (tit.dataset.tabsTitle === tab.dataset.tabsHandler) {
+                tit.classList.remove('hidden')
+            } else {
+                tit.classList.add('hidden')
+            }
+        })
+
 
     })
 }
