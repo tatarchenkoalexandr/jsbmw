@@ -18,7 +18,7 @@ featureLinkElems.forEach((btn, index) => {
         });
         featureSubElems.forEach((nosub,i2) => {
             //удалить ненужные
-            if (i2!=index) {nosub.classList.add('hidden ')}
+            if (i2!=index) {nosub.classList.add('hidden')}
         });
         featureSubElems[index].classList.toggle('hidden');
         btn.classList.toggle('feature__link_active');
